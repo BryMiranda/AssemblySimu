@@ -13,34 +13,38 @@ Este proyecto utiliza Laravel, React e Inertia. Sigue los pasos a continuación 
 🔹 1. Clonar el Repositorio
 Abre la terminal y ejecuta:
 
-sh
-Copiar
-Editar
 git clone https://github.com/BryMiranda/AssemblySimu.git
 cd AssemblySimu
+
 🔹 2. Configurar el Entorno
 Copia el archivo de configuración:
 
-sh
-Copiar
-Editar
 cp .env.example .env
-Genera la clave de la aplicación:
 
-sh
-Copiar
-Editar
+Genera la clave de la aplicación:
 php artisan key:generate
+
 🔹 3. Instalar Dependencias
 Ejecuta los siguientes comandos:
 
 📦 Instalar paquetes de PHP (Laravel)
-sh
-Copiar
-Editar
 composer install
+
 📦 Instalar paquetes de JavaScript (React, Inertia, Vite, Tailwind, etc.)
-sh
-Copiar
-Editar
 npm install
+
+🔹 4. Configurar la Base de Datos
+Asegúrate de tener MySQL instalado y ejecutándose.
+
+Crea una base de datos llamada assemblysimu.
+
+Ejecutar migraciones
+php artisan migrate
+
+🔹 5. Ejecutar el Servidor
+Ejecuta el backend de Laravel:
+php artisan serve
+
+En otro terminal, corre el frontend con Vite:
+npm run dev
+El proyecto estará disponible en http://127.0.0.1:8000.
