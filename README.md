@@ -22,15 +22,18 @@ Copia el archivo de configuración:
 cp .env.example .env
 
 Genera la clave de la aplicación:
+
 php artisan key:generate
 
 🔹 3. Instalar Dependencias
 Ejecuta los siguientes comandos:
 
 📦 Instalar paquetes de PHP (Laravel)
+
 composer install
 
 📦 Instalar paquetes de JavaScript (React, Inertia, Vite, Tailwind, etc.)
+
 npm install
 
 🔹 4. Configurar la Base de Datos
@@ -39,12 +42,16 @@ Asegúrate de tener MySQL instalado y ejecutándose.
 Crea una base de datos llamada assemblysimu.
 
 Ejecutar migraciones
+
 php artisan migrate
 
 🔹 5. Ejecutar el Servidor
 Ejecuta el backend de Laravel:
+
 php artisan serve
 
 En otro terminal, corre el frontend con Vite:
+
 npm run dev
+
 El proyecto estará disponible en http://127.0.0.1:8000.
