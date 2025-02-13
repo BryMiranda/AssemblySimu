@@ -10,7 +10,12 @@ class AuthController extends Controller
 {
     public function index()
     {
-        return Inertia::render('Auth/Login');
+        return Inertia::render('Auth/StartScreen');
+    }
+
+    public function game()
+    {
+        return Inertia::render('Game/Game');
     }
 
     public function login(Request $request)
@@ -20,6 +25,6 @@ class AuthController extends Controller
         ]);
 
         $user = User::firstOrCreate(['name' => $request->name]);
-        return redirect('/game')->with(['user' => $user]);
+        return redirect()->route('game.index')->with(['user' => $user]);
     }
 }
